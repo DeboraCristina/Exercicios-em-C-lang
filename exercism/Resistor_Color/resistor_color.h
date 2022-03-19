@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                         ____  U _____ u    */
-/*   triangle.h                                           |  _ \ \| ___ |/    */
+/*   resistor_color.h                                     |  _ \ \| ___ |/    */
 /*                                                       /| | | | |  _|       */
 /*   Autor: Debora                                       U| |_| |\| |___      */
 /*                                                        |____/ u|_____|     */
-/*   Created: 2022/03/18                                   |||_   <<   >>     */
+/*   Created: 2022/03/19                                   |||_   <<   >>     */
 /*                                                        (__)_) (__) (__)    */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TRIANGLE_H
-#define TRIANGLE_H
+#ifndef RESISTOR_H
+#define RESISTOR_H
 
-typedef	struct {
-	double	a;
-	double	b;
-	double	c;
-} triangle_t;
-
-int	is_equilateral(triangle_t sides);
-int	is_isosceles(triangle_t sides);
-int	is_scalene(triangle_t sides);
+typedef	enum{
+	BLACK,
+	BROWN,
+	RED,
+	ORANGE,
+	YELLOW,
+	GREEN,
+	BLUE,
+	VIOLET,
+	GREY,
+	WHITE
+} resistor_band_t;
 
 #endif

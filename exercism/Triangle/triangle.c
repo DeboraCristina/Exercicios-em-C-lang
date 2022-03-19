@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                         ____  U _____ u    */
+/*   triangle.c                                           |  _ \ \| ___ |/    */
+/*                                                       /| | | | |  _|       */
+/*   Autor: Debora                                       U| |_| |\| |___      */
+/*                                                        |____/ u|_____|     */
+/*   Created: 2022/03/18                                   |||_   <<   >>     */
+/*                                                        (__)_) (__) (__)    */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "triangle.h"
 #include <stdio.h>
 
@@ -5,9 +17,13 @@ int	is_triangle(triangle_t sides);
 
 int	is_triangle(triangle_t sides)
 {
-	if (sides.a == 0 || sides.b == 0 || sides.c == 0 )
+	if (sides.a == 0 || sides.b == 0 || sides.c == 0)
 		return (0);
-	else if (sides.a > sides.b + sides.c || sides.b > sides.a + sides.c || sides.c > sides.b + sides.a)
+	else if (sides.a > sides.b + sides.c)
+		return (0);
+	else if (sides.b > sides.a + sides.c)
+		return (0);
+	else if (sides.c > sides.b + sides.a)
 		return (0);
 	return (1);
 }
@@ -44,7 +60,7 @@ int	is_scalene(triangle_t sides)
 		return (1);
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	triangle_t lados = { 4, 4, 4 };
@@ -54,3 +70,4 @@ int	main(void)
 	printf("É isósceles \" %d \"\n",is_isosceles(lados));
 	printf("É escaleno \" %d \"\n",is_scalene(lados));
 }
+*/
